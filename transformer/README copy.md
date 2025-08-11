@@ -1,8 +1,8 @@
 # transformer
 ![结构图](pic/attentionisallyouneed.png)
-
+12
 ![点积图](pic/Scaled Dot-Product Attention.png)  
-
+34
 ![多头注意力图](pic/Multi-Head Attention.png.png)  
 
 # bert
