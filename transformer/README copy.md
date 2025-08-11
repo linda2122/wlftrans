@@ -1,5 +1,5 @@
 # transformer
-![结构图](transformer/pic/attentionisallyouneed.png)
+![结构图](pic/attentionisallyouneed.png)
 
 # bert
 - 论文重点   
