@@ -1,9 +1,9 @@
 # transformer
 ![结构图](pic/attentionisallyouneed.png)
-12
-![点积图](pic/Scaled Dot-Product Attention.png)  
-34
-![多头注意力图](pic/Multi-Head Attention.png.png)  
+点积图  
+![点积图](pic/Scaled-Dot-Product-Attention.png)  
+多头注意力结构图   
+![多头注意力图](pic/Multi-Head-Attention.png)  
 
 # bert
 - 论文重点   
