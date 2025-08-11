@@ -5,6 +5,9 @@
 多头注意力结构图   
 ![多头注意力图](pic/Multi-Head-Attention.png)  
 
+进化史
+---
+
 # bert
 - 论文重点   
 1、  
