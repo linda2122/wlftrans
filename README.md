@@ -1,3 +1,6 @@
+按.键 进入在线编辑git页面
+图片无法显示，将\改成/
+
 # transformer
 ![结构图](transformer/pic/attentionisallyouneed.png)
 
