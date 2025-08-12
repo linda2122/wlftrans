@@ -206,3 +206,32 @@ Many layers inside a neural network are parameterized, i.e. have associated weig
 
     for name, param in model.named_parameters():
         print(f"Layer: {name} | Size: {param.size()} | Values : {param[:2]} \n")
+
+## Automatic Differentiation with torch.autograd
+When training neural networks, the most frequently used algorithm is __back propagation__. In this algorithm, parameters (model weights) are adjusted according to the gradient of the loss function with respect to the given parameter.
+
+在训练神经网络时，最常用的算法是反向传播。在该算法中，参数（模型权重）会根据损失函数相对于给定参数的梯度进行调整。
+
+To compute those gradients, PyTorch has a built-in differentiation engine called . It supports automatic computation of gradient for any computational graph.torch.autograd
+
+为了计算这些梯度，PyTorch 内置了一个名为 torch.autograd 的微分引擎。它支持为任何计算图自动计算梯度。
+
+Consider the simplest one-layer neural network, with input , parameters and , and some loss function. It can be defined in PyTorch in the following manner:x w b
+
+考虑一个最简单的单层神经网络，包含输入 x、参数 w 和 b，以及某个损失函数
+
+    import torch
+
+    x = torch.ones(5)  # input tensor
+    y = torch.zeros(3)  # expected output
+    w = torch.randn(5, 3, requires_grad=True)
+    b = torch.randn(3, requires_grad=True)
+    z = torch.matmul(x, w)+b
+    loss = torch.nn.functional.binary_cross_entropy_with_logits(z, y)
+
+在这个例子中：
+w 和 b 设置了 requires_grad=True，表示我们需要跟踪它们的计算历史并计算梯度
+当调用 loss_fn.backward() 时，PyTorch 会自动计算 loss 相对于所有 requires_grad=True 的参数（w 和 b）的梯度
+梯度值会存储在参数的 .grad 属性中，供后续优化器更新参数使用
+
+这就是 PyTorch 自动求导机制的核心，它极大简化了神经网络训练中梯度计算的过程。
