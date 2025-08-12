@@ -53,7 +53,7 @@ We have loaded that dataset into the DataLoader and can iterate through the data
 
 Datasets可以一次提取一个样本的特征和标签。在实际训练模型时，需要以“小批量”的形式传递样本，在每个 epoch（轮次）重新打乱数据以减少模型过拟合，并使用 Python 的multiprocessing来加快数据提取速度。简而言之：datasets仅支持单条查数，难以支持批量数据及同步的数据处理。
 
-## transform
+## 4、transform
 https://docs.pytorch.org/tutorials/beginner/basics/transforms_tutorial.html  
 
 Data does not always come in its final processed form that is required for training machine learning algorithms. We use transforms to perform some manipulation of the data and make it suitable for training.
@@ -87,7 +87,7 @@ Lambda 变换可应用任何用户定义的 lambda 函数。在这里，我们�
 
 具体有多少transform，后续实践的时候再看。
 
-## Build the Neural Network
+## 5、Build the Neural Network
 https://docs.pytorch.org/tutorials/beginner/basics/buildmodel_tutorial.html
 
 ### Define the Class
@@ -207,7 +207,7 @@ Many layers inside a neural network are parameterized, i.e. have associated weig
     for name, param in model.named_parameters():
         print(f"Layer: {name} | Size: {param.size()} | Values : {param[:2]} \n")
 
-## Automatic Differentiation with torch.autograd
+## 6、Automatic Differentiation with torch.autograd
 When training neural networks, the most frequently used algorithm is __back propagation__. In this algorithm, parameters (model weights) are adjusted according to the gradient of the loss function with respect to the given parameter.
 
 在训练神经网络时，最常用的算法是反向传播。在该算法中，参数（模型权重）会根据损失函数相对于给定参数的梯度进行调整。
@@ -339,7 +339,7 @@ y.backward(v)
 
 这里的本质是：当输出为张量时，PyTorch 计算的是损失函数对输出的梯度（即 `v`）与输出对参数的雅可比矩阵的乘积，这在某些高阶优化或复杂损失场景中非常有用。而标量损失的反向传播可以看作是这种情况的特例（此时权重张量为 1）。
 
-## Optimizing Model Parameters【继续】
+## 7、Optimizing Model Parameters【继续】
 
 https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html
 
@@ -482,5 +482,5 @@ When presented with some training data, our untrained network is likely not to g
 ### Optimizer
 ？？
 
-## Save and Load the Model
+## 8、Save and Load the Model
 to be continue
