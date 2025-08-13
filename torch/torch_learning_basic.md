@@ -489,3 +489,5 @@ https://docs.pytorch.org/tutorials/beginner/basics/saveloadrun_tutorial.html
 -- Saving and Loading a General Checkpoint in PyTorch
 https://docs.pytorch.org/tutorials/beginner/saving_loading_models.html
 -- Tips for loading an nn.Module from a checkpoint
+https://docs.pytorch.org/tutorials/recipes/recipes/module_load_state_dict_tips.html
+
