@@ -480,7 +480,12 @@ When presented with some training data, our untrained network is likely not to g
 当面对一些训练数据时，我们未训练的网络很可能无法给出正确答案。损失函数（Loss Function）用于衡量模型得出的结果与目标值之间的差异程度，而我们在训练过程中想要最小化的正是这个损失函数。为了计算损失，我们会使用给定数据样本的输入进行预测，然后将其与数据的真实标签值进行比较。
 
 ### Optimizer
-？？
+to be continue
+
 
 ## 8、Save and Load the Model
-to be continue
+https://docs.pytorch.org/tutorials/beginner/basics/saveloadrun_tutorial.html
+
+-- Saving and Loading a General Checkpoint in PyTorch
+https://docs.pytorch.org/tutorials/beginner/saving_loading_models.html
+-- Tips for loading an nn.Module from a checkpoint
